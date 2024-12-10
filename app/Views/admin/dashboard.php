@@ -74,7 +74,7 @@
                             </td>
                             <td><?= $transaksi['created_at'] ?></td>
                             <td>
-                                <a href="/admin/verifikasi/<?= $transaksi['id_transaksi'] ?>" class="btn btn-primary">Verifikasi</a>
+                                <a href="<?= base_url() ?>admin/verifikasi/<?= $transaksi['id_transaksi'] ?>" class="btn btn-primary">Verifikasi</a>
                             </td>
                         <?php endforeach; ?>
                     </tr>

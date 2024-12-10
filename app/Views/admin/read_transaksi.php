@@ -62,7 +62,7 @@
                             <?php if (empty($trx['bukti_transaksi'])) : ?>
                                 <td>-</td>
                             <?php else : ?>
-                                <td><button href="<?php echo base_url('bukti/' . $trx['bukti_transaksi']) ?>" class="btn btn-primary">Lihat Bukti</button></td>
+                                <td><a href="<?php echo base_url('bukti/' . $trx['bukti_transaksi']) ?>" class="btn btn-primary">Lihat Bukti</a></td>
                             <?php endif; ?>
                             <td><?= date('Y-m-d H:i:s', strtotime($trx['created_at'])) ?></td>
                         </tr>

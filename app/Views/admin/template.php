@@ -27,14 +27,14 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="<?php echo base_url(); ?>/assets/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="<?php echo base_url(); ?>/assets/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+    <link href="<?php echo base_url(); ?>assets/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="<?php echo base_url(); ?>assets/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="<?php echo base_url(); ?>/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo base_url(); ?>assets/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <link href="<?php echo base_url(); ?>/assets/css/style.css" rel="stylesheet">
+    <link href="<?php echo base_url(); ?>assets/css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -51,20 +51,21 @@
         <!-- Sidebar Start -->
         <div class="sidebar pe-4 pb-3">
             <nav class="navbar bg-light navbar-light">
-                <a href="<?php echo base_url(); ?>/admin/dashboard" class="navbar-brand mx-4 mb-3">
-                    <img class="img-fluid" src="<?php echo base_url(); ?>/assets/img/alipay.png" alt="" style="width: 200px; height: 150px;">
+                <a href="<?php echo base_url(); ?>admin/dashboard" class="navbar-brand mx-4 mb-3">
+                    <img class="img-fluid" src="<?php echo base_url(); ?>assets/img/alipay.png" alt="" style="width: 200px; height: 150px;">
                 </a>
                 <div class="navbar-nav w-100">
-                    <a href="<?php echo base_url(); ?>/admin/dashboard" class="nav-item nav-link"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
+                    <a href="<?php echo base_url(); ?>admin/dashboard" class="nav-item nav-link"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-user me-2"></i>Siswa</a>
                         <div class="dropdown-menu bg-transparent border-0">
-                            <a href="<?php echo base_url(); ?>/admin/read_siswa" class="dropdown-item">Data Siswa</a>
-                            <a href="<?php echo base_url(); ?>/admin/read_kelas" class="dropdown-item">Data Kelas</a>
+                            <a href="<?php echo base_url(); ?>admin/read_siswa" class="dropdown-item">Data Siswa</a>
+                            <a href="<?php echo base_url(); ?>admin/read_kelas" class="dropdown-item">Data Kelas</a>
                         </div>
                     </div>
-                    <a href="<?php echo base_url(); ?>/admin/read_user" class="nav-item nav-link"><i class="fa fa-users me-2"></i>Pengguna</a>
-                    <a href="<?php echo base_url(); ?>/admin/read_pengumuman" class="nav-item nav-link"><i class="fa fa-newspaper me-2"></i>Pengumuman</a>
+                    <a href="<?php echo base_url(); ?>admin/read_user" class="nav-item nav-link"><i class="fa fa-users me-2"></i>Pengguna</a>
+                    <a href="<?php echo base_url(); ?>admin/read_transaksi" class="nav-item nav-link"><i class="fa fa-money-bill me-2"></i>Transaksi</a>
+                    <a href="<?php echo base_url(); ?>admin/read_pengumuman" class="nav-item nav-link"><i class="fa fa-newspaper me-2"></i>Pengumuman</a>
 
 
 
@@ -88,7 +89,7 @@
                             <span class="d-none d-lg-inline-flex"><?php echo session()->get('nama'); ?></span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
-                            <a href="<?php echo base_url(); ?>/logout" class="dropdown-item">Log Out</a>
+                            <a href="<?php echo base_url(); ?>logout" class="dropdown-item">Log Out</a>
                         </div>
                     </div>
                 </div>
@@ -112,13 +113,13 @@
         <!-- JavaScript Libraries -->
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="<?php echo base_url(); ?>/assets/lib/chart/chart.min.js"></script>
-        <script src="<?php echo base_url(); ?>/assets/lib/easing/easing.min.js"></script>
-        <script src="<?php echo base_url(); ?>/assets/lib/waypoints/waypoints.min.js"></script>
-        <script src="<?php echo base_url(); ?>/assets/lib/owlcarousel/owl.carousel.min.js"></script>
-        <script src="<?php echo base_url(); ?>/assets/lib/tempusdominus/js/moment.min.js"></script>
-        <script src="<?php echo base_url(); ?>/assets/lib/tempusdominus/js/moment-timezone.min.js"></script>
-        <script src="<?php echo base_url(); ?>/assets/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+        <script src="<?php echo base_url(); ?>assets/lib/chart/chart.min.js"></script>
+        <script src="<?php echo base_url(); ?>assets/lib/easing/easing.min.js"></script>
+        <script src="<?php echo base_url(); ?>assets/lib/waypoints/waypoints.min.js"></script>
+        <script src="<?php echo base_url(); ?>assets/lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="<?php echo base_url(); ?>assets/lib/tempusdominus/js/moment.min.js"></script>
+        <script src="<?php echo base_url(); ?>assets/lib/tempusdominus/js/moment-timezone.min.js"></script>
+        <script src="<?php echo base_url(); ?>assets/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
 
         <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.7.1/css/buttons.dataTables.min.css">
         <script src="https://cdn.datatables.net/buttons/1.7.1/js/dataTables.buttons.min.js"></script>
@@ -131,7 +132,7 @@
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
         <!-- Template Javascript -->
-        <script src="<?php echo base_url(); ?>/assets/js/main.js"></script>
+        <script src="<?php echo base_url(); ?>assets/js/main.js"></script>
         <?php if (session()->getFlashdata('error')) : ?>
             <script>
                 Swal.fire({

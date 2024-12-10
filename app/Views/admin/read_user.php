@@ -50,7 +50,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form action="<?php echo base_url(); ?>/admin/action_tambah_user" id="formTambahuser" method="post">
+                <form action="<?php echo base_url(); ?>admin/action_tambah_user" id="formTambahuser" method="post">
                     <div class="form-group">
                         <label for="Nama">Nama</label>
                         <input type="text" class="form-control" id="namauser" name="nama" placeholder="Masukkan Nama User">
@@ -88,7 +88,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form action="<?php echo base_url(); ?>/admin/action_edit_user" method="post">
+                    <form action="<?php echo base_url(); ?>admin/action_edit_user" method="post">
                         <div class="form-group">
                             <label for="namaEdit">Nama</label>
                             <input type="text" class="form-control" id="namaEdit" name="nama" value="<?= $userItem['nama_user'] ?>" required>

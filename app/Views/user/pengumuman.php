@@ -12,7 +12,6 @@
 
 <div class="container-fluid pt-4 px-4">
     <div class="row g-4">
-        <marquee behavior="alternate" direction="left">Halo, selamat datang, Bapak/Ibu orang tua dari <?php echo $userData['nama_siswa']; ?></marquee>
         <div id="pdf-container"></div>
     </div>
 </div>
@@ -20,7 +19,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
 
 <script>
-    const url = '<?php echo base_url(); ?>/assets/pdf/<?php echo $pengumuman['nama_pengumuman']; ?>'; // Ganti dengan URL file PDF Anda
+    const url = '<?php echo base_url(); ?>assets/pdf/<?php echo $pengumuman['nama_pengumuman']; ?>'; // Ganti dengan URL file PDF Anda
 
     // Fungsi untuk memuat dan menampilkan PDF
     function renderPDF(url) {

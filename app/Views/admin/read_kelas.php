@@ -14,6 +14,7 @@
                     <tr>
                         <th>No</th>
                         <th>Nama Kelas</th>
+                        <th>Tagihan</th>
                         <th>Aksi</th>
                     </tr>
                 </thead>
@@ -23,10 +24,9 @@
                         <tr>
                             <td><?= $no++ ?></td>
                             <td><?= $kelasItem['nama_kelas'] ?></td>
+                            <td>Rp. <?= number_format($kelasItem['tagihan_kelas'], 0, ',', '.') ?></td>
                             <td>
-                                <!-- Tombol Edit -->
                                 <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modalEditKelas<?= $kelasItem['id_kelas'] ?>">Edit</button>
-                                <!-- Tombol Hapus -->
                                 <button type="button" class="btn btn-danger" onclick="confirmDelete(<?= $kelasItem['id_kelas'] ?>)">Hapus</button>
                             </td>
                         </tr>
@@ -46,10 +46,14 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form action="<?php echo base_url(); ?>/admin/action_tambah_kelas" id="formTambahKelas" method="post">
+                <form action="<?php echo base_url(); ?>admin/action_tambah_kelas" id="formTambahKelas" method="post">
                     <div class="form-group">
                         <label for="namaSiswa">Nama Kelas</label>
                         <input type="text" class="form-control" id="namaKelas" name="kelas" placeholder="Masukkan nama kelas">
+                    </div>
+                    <div class="form-group">
+                        <label for="namaSiswa">Tagihan Kelas</label>
+                        <input type="number" class="form-control" id="tagihan" name="tagihan" placeholder="Masukkan tagihan kelas">
                     </div>
             </div>
             <div class="modal-footer">
@@ -63,29 +67,33 @@
 
 <!-- Modal Edit Kelas (Untuk Setiap Kelas) -->
 <?php foreach ($kelas as $kelasItem) : ?>
-<div class="modal fade" id="modalEditKelas<?= $kelasItem['id_kelas'] ?>" tabindex="-1" aria-labelledby="modalEditKelasLabel<?= $kelasItem['id_kelas'] ?>" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="modalEditKelasLabel<?= $kelasItem['id_kelas'] ?>">Edit Kelas</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    <div class="modal fade" id="modalEditKelas<?= $kelasItem['id_kelas'] ?>" tabindex="-1" aria-labelledby="modalEditKelasLabel<?= $kelasItem['id_kelas'] ?>" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalEditKelasLabel<?= $kelasItem['id_kelas'] ?>">Edit Kelas</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="<?php echo base_url(); ?>admin/action_edit_kelas" method="post">
+                        <div class="form-group">
+                            <label for="namaKelasEdit">Nama Kelas</label>
+                            <input type="text" class="form-control" id="namaKelasEdit" name="kelas" value="<?= $kelasItem['nama_kelas'] ?>" required>
+                            <input type="hidden" name="id_kelas" value="<?= $kelasItem['id_kelas'] ?>">
+                        </div>
+                        <div class="form-group">
+                            <label for="namaKelasEdit">Tagihan Kelas</label>
+                            <input type="text" class="form-control" id="tagihan" name="tagihan" value="<?= $kelasItem['tagihan_kelas'] ?>" required>
+                        </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                    <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
+                </div>
+                </form>
             </div>
-            <div class="modal-body">
-                <form action="<?php echo base_url(); ?>/admin/action_edit_kelas" method="post">
-                    <div class="form-group">
-                        <label for="namaKelasEdit">Nama Kelas</label>
-                        <input type="text" class="form-control" id="namaKelasEdit" name="kelas" value="<?= $kelasItem['nama_kelas'] ?>" required>
-                        <input type="hidden" name="id_kelas" value="<?= $kelasItem['id_kelas'] ?>">
-                    </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
-                <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
-            </div>
-            </form>
         </div>
     </div>
-</div>
 <?php endforeach; ?>
 
 <script>

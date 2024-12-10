@@ -44,7 +44,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form action="<?php echo base_url(); ?>/admin/action_tambah_siswa" id="formTambahSiswa" method="post">
+                <form action="<?php echo base_url(); ?>admin/action_tambah_siswa" id="formTambahSiswa" method="post">
                     <div class="form-group">
                         <label for="namaSiswa">Nama Siswa</label>
                         <input type="text" class="form-control" id="namaSiswa" name="nama" placeholder="Masukkan nama siswa">
@@ -82,7 +82,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form action="<?php echo base_url(); ?>/admin/action_edit_siswa" method="post">
+                    <form action="<?php echo base_url(); ?>admin/action_edit_siswa" method="post">
                         <div class="form-group">
                             <label for="namaKelasEdit">Nama Siswa</label>
                             <input type="text" class="form-control" id="namaSiswa" name="nama" value="<?= $siswa['nama_siswa'] ?>" required>

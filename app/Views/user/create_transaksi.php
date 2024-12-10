@@ -7,7 +7,7 @@
         <div class="d-flex align-items-center justify-content-between mb-4">
             <h6 class="mb-0">Input Transaksi</h6>
         </div>
-        <form action="<?php echo base_url(); ?>/admin/action_input_transaksi" method="post" enctype="multipart/form-data">
+        <form action="<?php echo base_url(); ?>admin/action_input_transaksi" method="post" enctype="multipart/form-data">
 
 
             <div class="mb-6">

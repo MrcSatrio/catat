@@ -41,7 +41,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form action="<?php echo base_url(); ?>/admin/action_edit_pengumuman" method="post" enctype="multipart/form-data">
+                    <form action="<?php echo base_url(); ?>admin/action_edit_pengumuman" method="post" enctype="multipart/form-data">
                         <div class="form-group">
                             <label for="namaKelasEdit">Pengumuman</label>
                             <input type="file" class="form-control" id="pengumuman" name="pengumuman" value="<?= $pm['id_pengumuman'] ?>" accept="application/pdf" required>

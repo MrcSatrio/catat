@@ -181,6 +181,7 @@ class Admin extends BaseController
         // Mendefinisikan aturan validasi
         $rules = [
             'kelas' => 'required|min_length[2]|max_length[10]',
+            'tagihan' => 'required|numeric',
         ];
 
         // Melakukan validasi
@@ -194,6 +195,7 @@ class Admin extends BaseController
         // Menyimpan data kelas ke model jika validasi sukses        
         $this->kelasModel->save([
             'nama_kelas' => $this->request->getPost('kelas'),
+            'tagihan_kelas' => $this->request->getPost('tagihan'),
         ]);
 
         // Redirect setelah data berhasil disimpan        
@@ -233,6 +235,7 @@ class Admin extends BaseController
         // Melakukan validasi
         $rules = [
             'kelas' => 'required|min_length[2]|max_length[10]',
+            'tagihan' => 'required|numeric',
         ];
 
         if (!$this->validate($rules)) { // Melakukan validasi           
@@ -244,6 +247,7 @@ class Admin extends BaseController
         // Memperbarui data kelas
         $this->kelasModel->update($id_kelas, [
             'nama_kelas' => $this->request->getPost('kelas'),
+            'tagihan_kelas' => $this->request->getPost('tagihan'),
         ]);
 
         // Redirect setelah data berhasil diperbarui
